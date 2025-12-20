@@ -90,6 +90,7 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Digital_Forensics_-_Illustration.png" width="250" alt="Image Forgery Illustration">
   <h1>Image Forgery Detection Project</h1>
   <p>Hybrid SWT + CNN Model for Copy-Move and Splicing Forgery Detection</p>
+  <!--LAST_UPDATE_BADGE-->
 </header>
 
 <div class="container">
@@ -131,8 +132,8 @@ It combines <b>Stationary Wavelet Transform (SWT)</b> with a custom <b>CNN</b> t
     </tr>
     <tr>
       <td>Copy-Move</td>
-      <td>MICC-F2200</td>
-      <td><a href="https://github.com/greatzh/Image-Forgery-Datasets-List#MICC-F2200">Link</a></td>
+      <td>MICC-F2000</td>
+      <td><a href="https://github.com/greatzh/Image-Forgery-Datasets-List#MICC-F2000">Link</a></td>
     </tr>
     <tr>
       <td>Copy-Move</td>
