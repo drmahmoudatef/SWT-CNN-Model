@@ -1,52 +1,234 @@
-<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Image Forgery Detection Project</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Forgery Detection Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #0d1117;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header img {
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+    h1, h2, h3 {
+      color: #0d1117;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #0d1117;
+      color: white;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background-color: #eaeaea;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #eaeaea;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    .badges img {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    .connect a {
+      margin-right: 10px;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      background-color: #0d1117;
+      color: white;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  </style>
+</head>
+<body>
 
-<p>Welcome to this repository! This project focuses on detecting <b>copy-move</b> and <b>splicing</b> forgeries in images using a hybrid deep learning approach. 
-We combine the <b>Stationary Wavelet Transform (SWT)</b> with a custom <b>CNN model</b> to enhance feature extraction and improve detection accuracy.</p>
+<header>
+  <img src="https://i.ibb.co/1bLzB5d/digital-forensics.png" width="200" alt="Image Forgery Illustration">
+  <h1>Image Forgery Detection Project</h1>
+  <p>Hybrid SWT + CNN Model for Copy-Move and Splicing Forgery Detection</p>
+</header>
 
-<h3>Datasets Used</h3>
+<div class="container">
+
+<h2>1. Description</h2>
+<p>This project detects <b>copy-move</b> and <b>splicing</b> forgeries in images using a hybrid deep learning approach.  
+It combines <b>Stationary Wavelet Transform (SWT)</b> with a custom <b>CNN</b> to enhance feature extraction and improve detection accuracy.</p>
+
 <ul>
-  <li><b>Copy-Move Forgery:</b> GRIP, COVERAGE, MICC-F220, MICC-F2000, CASIA-CMFD</li>
-  <li><b>Splicing Forgery:</b> CASIA V1, CASIA V2</li>
-</ul>
-
-<h3>Method Overview</h3>
-<ul>
-  <li>Apply <b>SWT</b> to decompose images into four frequency sub-bands (LL, LH, HL, HH).</li>
-  <li>Combine sub-bands into a 4-channel image as input for the CNN.</li>
-  <li>Train the model using multiple datasets with data augmentation.</li>
-  <li>Evaluate performance using accuracy, precision, recall, F1-score, and confusion matrices.</li>
-</ul>
-
-<h3>Key Features</h3>
-<ul>
-  <li>High detection accuracy across seven datasets.</li>
-  <li>Robust against noise, JPEG compression, rotation, and scaling.</li>
   <li>Supports both copy-move and splicing forgery detection.</li>
-  <li>Uses a lightweight CNN with enhanced feature extraction from SWT.</li>
+  <li>Robust to noise, JPEG compression, rotation, and scaling.</li>
+  <li>Lightweight CNN architecture with high accuracy.</li>
 </ul>
 
-<h3>Tools & Technologies</h3>
-<p>
-  <img alt="Python" src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img alt="TensorFlow" src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-  <img alt="Keras" src="https://img.shields.io/badge/-Keras-D00000?style=flat-square&logo=keras&logoColor=white" />
-  <img alt="OpenCV" src="https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" />
-  <img alt="NumPy" src="https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
-</p>
+<h2>2. Datasets Used</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Forgery Type</th>
+      <th>Dataset</th>
+      <th>Link / DOI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Copy-Move</td>
+      <td>GRIP</td>
+      <td><a href="https://github.com/greatzh/Image-Forgery-Datasets-List#GRIP">Link</a></td>
+    </tr>
+    <tr>
+      <td>Copy-Move</td>
+      <td>COVERAGE</td>
+      <td><a href="https://github.com/greatzh/Image-Forgery-Datasets-List#COVERAGE">Link</a></td>
+    </tr>
+    <tr>
+      <td>Copy-Move</td>
+      <td>MICC-F200</td>
+      <td><a href="https://github.com/greatzh/Image-Forgery-Datasets-List#MICC-F200">Link</a></td>
+    </tr>
+    <tr>
+      <td>Copy-Move</td>
+      <td>MICC-F2200</td>
+      <td><a href="https://github.com/greatzh/Image-Forgery-Datasets-List#MICC-F2200">Link</a></td>
+    </tr>
+    <tr>
+      <td>Copy-Move</td>
+      <td>CASIA-CMFD</td>
+      <td><a href="http://forensics.idealtest.org/">Link</a></td>
+    </tr>
+    <tr>
+      <td>Splicing</td>
+      <td>CASIA V1</td>
+      <td><a href="http://forensics.idealtest.org/">Link</a></td>
+    </tr>
+    <tr>
+      <td>Splicing</td>
+      <td>CASIA V2</td>
+      <td><a href="http://forensics.idealtest.org/">Link</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<h3>Results</h3>
+<h2>3. Code Information</h2>
+<p>Implemented in Python 3 with TensorFlow/Keras and OpenCV.</p>
+
+<pre>
+/data           -> Datasets
+/notebooks      -> Colab notebooks
+/src            -> Model training and evaluation scripts
+/results        -> Generated results (metrics, confusion matrices)
+/README.md      -> This file
+</pre>
+
+<h2>4. Usage Instructions</h2>
+<pre>
+git clone https://github.com/drmahmoudatef/SWT-CNN-Model.git
+cd SWT-CNN-Model
+pip install -r requirements.txt
+python src/train_model.py
+python src/evaluate_model.py
+</pre>
+<p>View results in <code>/results</code> folder.</p>
+
+<h2>5. Requirements</h2>
 <ul>
-  <li>Accuracy: 97–100% across the datasets.</li>
-  <li>High precision, recall, and F1-score.</li>
-  <li>Robust performance under post-processing attacks like noise and compression.</li>
+  <li>Python 3.8+</li>
+  <li>TensorFlow >= 2.9</li>
+  <li>Keras >= 2.9</li>
+  <li>OpenCV >= 4.5</li>
+  <li>NumPy, Pandas</li>
+  <li>Matplotlib / Seaborn</li>
 </ul>
 
-<h3>Connect with Me</h3>
-<p>
-  <a href="#" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a>
-  <a href="#" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<h2>6. Methodology</h2>
+<ol>
+  <li>Image Preprocessing: Resize, normalize, and augment images.</li>
+  <li>SWT Decomposition: Decompose images into four sub-bands (LL, LH, HL, HH).</li>
+  <li>Feature Fusion: Combine sub-bands into a 4-channel input for CNN.</li>
+  <li>CNN Training: Train on multiple datasets with data augmentation.</li>
+  <li>Evaluation: Compute Accuracy, Precision, Recall, F1-score, Confusion matrices.</li>
+  <li>Comparative Analysis: Compare with baseline CNN and traditional methods.</li>
+  <li>Robustness Testing: Evaluate performance under noise, compression, rotation, scaling.</li>
+</ol>
+
+<h2>7. Results</h2>
+<ul>
+  <li>Accuracy: 97–100% across datasets.</li>
+  <li>High Precision, Recall, and F1-score.</li>
+  <li>Robust under post-processing attacks.</li>
+</ul>
+
+<h2>8. Conclusions & Limitations</h2>
+<p><b>Conclusions:</b> SWT + CNN hybrid model achieves high detection performance across multiple datasets.</p>
+<p><b>Limitations:</b> Requires GPU for large datasets, dataset imbalance may affect minority class, unseen manipulation types reduce accuracy.</p>
+
+<h2>9. Citations</h2>
+<pre>
+@article{Atef2025SWT_CNN,
+  title={Image Forgery Detection Using SWT + CNN Hybrid Model},
+  author={Mahmoud Atef},
+  journal={Journal of Computer Vision Research},
+  year={2025}
+}
+</pre>
+
+<h2>10. License & Contribution</h2>
+<p>MIT License. Contributions welcome via pull requests.</p>
+
+<h2>11. Connect with Me</h2>
+<p class="connect">
+  <a href="https://github.com/drmahmoudatef" target="_blank"><img src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/drmahmoudatef" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"></a>
 </p>
 
-<hr/>
+</div>
 
-<p align="center">This README summarizes the image forgery detection project using a hybrid SWT + CNN approach.</p>
+<footer>
+  &copy; 2025 Mahmoud Atef | Image Forgery Detection Project
+</footer>
+
+</body>
+</html>
