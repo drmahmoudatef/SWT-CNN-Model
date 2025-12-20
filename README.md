@@ -87,7 +87,7 @@
 <body>
 
 <header>
-  <img src="https://i.ibb.co/1bLzB5d/digital-forensics.png" width="200" alt="Image Forgery Illustration">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Digital_Forensics_-_Illustration.png" width="250" alt="Image Forgery Illustration">
   <h1>Image Forgery Detection Project</h1>
   <p>Hybrid SWT + CNN Model for Copy-Move and Splicing Forgery Detection</p>
 </header>
