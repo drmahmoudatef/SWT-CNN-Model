@@ -1,118 +1,52 @@
-Image Forgery Detection using SWT and CNN
-Overview
+# ![Blob Sunglasses](https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430) Image Forgery Detection Project
 
-This repository presents a hybrid deep learning framework for image forgery detection, targeting both copy-move and splicing attacks.
-The proposed method integrates Stationary Wavelet Transform (SWT) with a Convolutional Neural Network (CNN) to enhance discriminative feature representation and improve robustness against post-processing operations.
+Welcome to this repository! This project focuses on detecting **copy-move** and **splicing** forgeries in images using a hybrid deep learning approach.  
+We combine the **Stationary Wavelet Transform (SWT)** with a custom **CNN model** to enhance feature extraction and improve detection accuracy.
 
-Key Contributions
+---
 
-Integration of SWT sub-bands (LL, LH, HL, HH) as multi-channel CNN input.
+## Datasets Used
+- **Copy-Move Forgery:** GRIP, COVERAGE, MICC-F220, MICC-F2000, CASIA-CMFD  
+- **Splicing Forgery:** CASIA V1, CASIA V2
 
-Lightweight yet effective CNN architecture.
+---
 
-Evaluation on multiple public benchmark datasets.
+## Method Overview
+1. Apply **SWT** to decompose images into four frequency sub-bands (LL, LH, HL, HH).  
+2. Combine sub-bands into a 4-channel image as input for the CNN.  
+3. Train the model using multiple datasets with data augmentation.  
+4. Evaluate performance using accuracy, precision, recall, F1-score, and confusion matrices.
 
-Robust performance under noise, compression, rotation, and scaling.
+---
 
-Datasets
+## Key Features
+- High detection accuracy across seven datasets.  
+- Robust against noise, JPEG compression, rotation, and scaling.  
+- Supports both copy-move and splicing forgery detection.  
+- Uses a lightweight CNN with enhanced feature extraction from SWT.
 
-All datasets are publicly available on Kaggle and are reorganized into Train / Validation / Test splits on Google Drive.
+---
 
-Copy-Move Forgery Datasets
+## Tools & Technologies
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) 
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) 
+![Keras](https://img.shields.io/badge/-Keras-D00000?style=flat-square&logo=keras&logoColor=white) 
+![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) 
+![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 
-MICC-F2000
-https://www.kaggle.com/datasets/manas29/micc-f2000
+---
 
-MICC-F200
-https://www.kaggle.com/datasets/nishaahin/miccf200
+## Results
+- Accuracy: **97–100%** across the datasets.  
+- High precision, recall, and F1-score.  
+- Robust performance under post-processing attacks like noise and compression.
 
-CASIA-CMFD
-https://www.kaggle.com/datasets/mashraffarouk/casia-cmfd
+---
 
-Splicing Forgery Datasets
+## Connect with Me
+[![GitHub](https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white)](#)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](#)
 
-CASIA V1
-https://www.kaggle.com/datasets/sophatvathana/casia-dataset
+---
 
-CASIA V2
-https://www.kaggle.com/datasets/divg07/casia-20-image-tampering-detection-dataset
-
-Methodology
-
-Data Loading
-Datasets are stored on Google Drive and accessed via Google Colab.
-
-Preprocessing
-
-Resize to 224×224
-
-Normalization
-
-Data augmentation (rotation, shift, zoom, flip)
-
-SWT Decomposition
-Each image is decomposed using Haar SWT into four sub-bands (LL, LH, HL, HH).
-
-Feature Fusion
-The four sub-bands are stacked as a 4-channel input tensor.
-
-CNN Architecture
-
-3 convolutional blocks
-
-Batch Normalization
-
-Global Average Pooling
-
-Fully connected layers
-
-Training Strategy
-
-Adam optimizer (LR = 0.001)
-
-Binary Cross-Entropy loss
-
-Class-weight balancing
-
-Model checkpointing
-
-Evaluation
-Performance is measured on unseen test sets.
-
-Evaluation Metrics
-
-The proposed model is evaluated using:
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-score
-
-TPR, TNR
-
-FPR, FNR
-
-Matthews Correlation Coefficient (MCC)
-
-Confusion Matrix
-
-Comparative and robustness evaluations are conducted against baseline CNN-based approaches.
-
-Results
-
-Achieved high detection accuracy across all datasets.
-
-Stable performance under post-processing attacks.
-
-Reduced false positives and false negatives compared to baseline models.
-
-Limitations
-
-Training requires GPU acceleration for large datasets.
-
-Performance may degrade for unseen forgery types.
-
-Dataset imbalance can influence minority class detection.
+*This README summarizes the image forgery detection project using a hybrid SWT + CNN approach.*
