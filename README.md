@@ -31,6 +31,29 @@ The model aims to detect both **copy-move** and **splicing** forgeries across mu
 
 ---
 
+---
+
+## 4. Usage Instructions
+
+### Clone Repository
+```bash
+git clone https://github.com/drmahmoudatef/SWT-CNN-Model.git
+cd SWT-CNN-Model
+
+pip install -r requirements.txt
+/data/MICC-F200
+/data/MICC-F2000
+/data/CASIA-CMFD
+/data/CASIA-V1
+/data/CASIA-V2
+
+python src/train_model.py
+
+python src/evaluate_model.py
+pip install -r requirements.txt
+/results
+
+
 ## 3. Code Structure
 
 The repository is organized as follows:
