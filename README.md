@@ -1,4 +1,3 @@
-# ![Blob Sunglasses](https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430) Image Forgery Detection Project
 
 Welcome to this repository!  
 This project focuses on detecting **copy-move** and **splicing** image forgeries using a **hybrid deep learning framework**.  
