@@ -19,10 +19,6 @@
       padding: 40px 20px;
       text-align: center;
     }
-    header img {
-      border-radius: 15px;
-      margin-bottom: 15px;
-    }
     h1, h2, h3 {
       color: #0d1117;
     }
@@ -65,10 +61,6 @@
       border-radius: 8px;
       overflow-x: auto;
     }
-    .badges img {
-      margin-right: 5px;
-      margin-bottom: 5px;
-    }
     .connect a {
       margin-right: 10px;
       text-decoration: none;
@@ -87,10 +79,8 @@
 <body>
 
 <header>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Digital_Forensics_-_Illustration.png" width="250" alt="Image Forgery Illustration">
   <h1>Image Forgery Detection Project</h1>
   <p>Hybrid SWT + CNN Model for Copy-Move and Splicing Forgery Detection</p>
-  <!--LAST_UPDATE_BADGE-->
 </header>
 
 <div class="container">
