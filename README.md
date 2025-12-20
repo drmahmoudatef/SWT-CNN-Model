@@ -1,5 +1,5 @@
 
-Welcome to this repository!  
+## Hybrid SWT-CNN Model Project
 This project focuses on detecting **copy-move** and **splicing** image forgeries using a **hybrid deep learning framework**.  
 The proposed approach integrates the **Stationary Wavelet Transform (SWT)** with a custom **Convolutional Neural Network (CNN)** to enhance feature representation and improve detection accuracy and robustness.
 
